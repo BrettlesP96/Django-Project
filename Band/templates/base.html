@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Default Title{% endblock %}</title>
+	{% block styles %}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xM6Qhm1PJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	{% endblock %}
+</head>
+<body>
+	<header>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Coldplay_logo.png/800px-Coldplay_logo.png?20220707140741" alt="Band Logo">
+		<nav>
+			<ul>
+				<a href="{% url 'Band:home' %}">Home</a>
+				<a href="{% url 'Band:discography' %}">Discography</a>
+				<a href="{% url 'Band:about' %}">About</a>
+				<a href="{% url 'Band:contact_us' %}">Contact Us</a>
+				<a href="{% url 'user_auth:login' %}">Login</a>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		{% block content %}{% endblock %}
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Coldplay All rights reserved.</p>
+	</footer>
+
+	{% block scripts %}
+		<script src="{% static 'js/script.js' %}"></script>
+	{% endblock %}
+</body>
+</html>

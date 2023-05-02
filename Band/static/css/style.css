@@ -1,0 +1,113 @@
+/* General Styles */
+
+/* Font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Make the logo a little bigger */
+  header img {
+    max-height: 100px;
+  }
+  
+  /* Animation to the navigation links */
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4 {
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+  
+  /* More spacing between paragraphs */
+  p {
+    margin-top: 1rem;
+    line-height: 1.8;
+  }
+  
+  /* Make images responsive */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  /* Modern footer style */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Box-shadow to the main content area for depth */
+  main {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+  }
+  
+  .social-media img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 0 5px;
+    object-fit: contain;
+  }
+  
+  
+  /* Main content */
+  @media screen and (min-width: 768px) {
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    main > * {
+      grid-column: span 2;
+    }
+  
+    .container {
+      padding: 2rem;
+    }
+  
+    p {
+      margin-top: 1.5rem;
+    }
+  }
+  

@@ -1,0 +1,95 @@
+/* General Styles /
+
+/ font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    }
+    
+    /* padding to the header to give it more breathing room */
+    header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    }
+    
+    /* Make the logo a little bigger */
+    header img {
+    max-height: 100px;
+    }
+    
+    /*animation to the navigation links */
+    nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    }
+    
+    nav ul li a:hover {
+    text-decoration: none;
+    color: #f8f8f8;
+    }
+    
+    /* About Us Page /
+    / Use a larger font for headings */
+    h2, h3, h4 {
+    margin-top: 2rem;
+    font-weight: 600;
+    }
+    
+    /*more spacing between paragraphs */
+    p {
+    margin-top: 1rem;
+    line-height: 1.8;
+    }
+    
+    /* Make images responsive */
+    .img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    }
+    
+    /*  modern footer style */
+    .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    }
+    
+    /* box-shadow to the main content area for depth */
+    main {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    }
+    
+    /* main content */
+    @media screen and (min-width: 768px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    }
+    main > * {
+        grid-column: span 2;
+    }
+    
+    .container {
+        padding: 2rem;
+    }
+    
+    p {
+        margin-top: 1.5rem;
+    }
+    }

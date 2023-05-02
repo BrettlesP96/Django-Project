@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <header>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-1jZtWc9vdrxZt+tGJtM/y6wWlSczC+Dl/rLBJdRUh8ZfX9Pn69x/F2nxG1JVr5w2q3rJP12rLNRo5NE5o6/ZJA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <nav>
+            <ul>
+                <li><a href="{% url 'Band:about' %}">About Us</a></li>
+                <li><a href="{% url 'Band:discography' %}">Discography</a></li>
+                <li><a href="{% url 'Band:contact_us' %}">Contact Us</a></li>
+                <li><a href="{% url 'user_auth:authenticate' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% if user.is_authenticated %}
+  		<p>Welcome to the official website of Coldplay.</p>
+	{% else %}
+  		<p>Please log in to access this site.</p>
+	{% endif %}
+   <footer>
+    </footer>
+{% endblock %}
+
+
+{% if user.is_authenticated %}
+  <p>Welcome to the official website of Coldplay.</p>
+{% else %}
+  <p>Please log in to access this site.</p>
+{% endif %}
